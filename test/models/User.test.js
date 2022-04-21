@@ -6,7 +6,7 @@ describe("Unit Tests for User class", () => {
 
     test('Create an User object', () => {
         //Aquí invocas el código que vas a usar en tu app
-        const user = new User(1, "Gera097", "Gerardo", "Bio", "dateCreated", "lastUpdated")
+        const user = new User(1, "Gera097", "Gerardo", "Bio")
 
         //Aquí validas los resultados de ese código
         //Esta es una comparación que va a igualar el valor de la izquierda con el valor de la derecha (valor esperado)
@@ -14,7 +14,7 @@ describe("Unit Tests for User class", () => {
         expect(user.username).toBe("Gera097")
         expect(user.name).toBe("Gerardo")
         expect(user.bio).toBe("Bio")
-        expect(user.dateCreated).toBe("dateCreated")
-        expect(user.lastUpdated).toBe("lastUpdated")
+        expect(user.dateCreated).not.toBeUndefined()
+        expect(user.lastUpdated).not.toBeUndefined()
     })
 })
