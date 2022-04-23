@@ -12,7 +12,9 @@ class UserView {
         else if (!(Object.keys(payload).includes('username') && Object.keys(payload).includes('name') && (Object.keys(payload).includes('id')))) {
             return { error: "necesitan tener un valor válido"}
         }
-        else {UserService.create(payload)}
+        else {
+            return UserService.create(payload.id, payload.username, payload.name)
+        }
         
     }
 }
